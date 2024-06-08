@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #6a64f1;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #524bd4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our Library</h1>
+        <button onclick="redirectTo('LibMemberForm.html')">New Library Membership</button>
+        <button onclick="redirectTo('BookForm.html')">Add New Book</button>
+        <button onclick="redirectTo('req.html')">Request Book</button>
+        <button onclick="showBookList()">Read Books</button>
+        <button onclick="showMembers()">Show Members</button>
+    </div>
+
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+        function showBookList() {
+            window.location.href = 'showBookList';
+        }
+        function showMembers() {
+            window.location.href = 'showMemberList';
+        }
+    </script>
+</body>
+</html>
